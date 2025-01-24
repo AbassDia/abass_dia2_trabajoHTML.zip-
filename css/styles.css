@@ -1,0 +1,422 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Conservez la même couleur que le menu */
+    z-index: 1000; /* Assurez-vous que le menu reste au-dessus du contenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre pour la séparation */
+}
+
+
+
+
+
+
+/* Encabezado */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .menu li a:hover,
+header .menu li a.active {
+    background-color: #FFC107;
+    color: #343A40;
+}
+
+/* Sección de Introducción */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+}
+
+.intro h1 {
+    color: #007BFF;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+/* Servicios */
+.services,
+.about {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2,
+.about h2 {
+    color: #007BFF;
+}
+
+/* Galería */
+.gallery {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.gallery h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.grad img:hover {
+    height: auto;
+    width: 65%;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
+.form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+form .checkbox label {
+    margin-left: 5px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Contacto */
+.contact {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.contact img {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #343A40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer .social {
+    margin-bottom: 10px;
+}
+
+footer .social a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    transition: opacity 0.3s;
+}
+
+footer .social a img:hover {
+    opacity: 0.7;
+}
+
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Formes supplémentaires */
+.checkbox label {
+    font-size: 0.9em;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* Bouton Burger */
+.burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    z-index: 1000;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Menu masqué */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Mode Mobile */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-200%);
+    }
+
+    .menu.active {
+        transform: translateY(0); /* Menu affiché */
+    }
+}
+
+/* Animation Burger (Croix lors de l'ouverture) */
+.burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0; /* Masquer la barre du milieu */
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+/* Style de base du titre */
+#animated-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    overflow: hidden; /* Nécessaire pour l'effet machine à écrire */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    border-right: 2px solid #fff; /* Curseur de machine à écrire */
+    animation: typing 3s steps(20, end), blink 0.5s step-end infinite alternate;
+}
+
+/* Animation de machine à écrire */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation du curseur */
+@keyframes blink {
+    from {
+        border-right-color: transparent;
+    }
+    to {
+        border-right-color: #fff;
+    }
+}
+
+/* Effet de pulsation après l'animation */
+.pulsate {
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
